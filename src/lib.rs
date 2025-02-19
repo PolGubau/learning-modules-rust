@@ -1,15 +1,15 @@
 mod other_file;
 mod some_folder;
 
-fn traer_grua() {
-    println!("Traer grua");
+fn get_crane() {
+    println!("Traer crane");
 }
 
 mod taller {
     pub mod reception {
         pub fn add_cita() {}
         pub fn llevar_a_taller() {
-            super::super::traer_grua();
+            super::super::get_crane();
         }
     }
     pub mod garaje {
