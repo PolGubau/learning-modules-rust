@@ -1,14 +1,17 @@
+mod other_file;
+mod some_folder;
+
 fn traer_grua() {
     println!("Traer grua");
 }
 
 mod taller {
-    pub mod recepcion {
-        fn add_cita() {}
-        fn () {
+    pub mod reception {
+        pub fn add_cita() {}
+        pub fn llevar_a_taller() {
             super::super::traer_grua();
         }
-    }llevar_a_taller
+    }
     pub mod garaje {
         pub fn arreglar_coche() {}
     }
@@ -17,8 +20,11 @@ pub fn llevar_a_arreglar() {
     // create is like a / in the path
     // super is like a ../ in the path
     // self is like a ./ in the path
-    crate::taller::garaje::arreglar_coche();
-    // taller::garaje::arreglar_coche();
+    // crate::taller::garaje::arreglar_coche();
+    taller::garaje::arreglar_coche();
+    taller::reception::add_cita();
+    taller::reception::llevar_a_taller();
+    some_folder::some_files::example_function();
 }
 
 // using USE
