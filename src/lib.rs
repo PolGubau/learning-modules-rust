@@ -30,9 +30,10 @@ pub fn llevar_a_arreglar() {
 // using USE
 // is like a import in python
 use crate::taller::garaje as garage_module;
-
+use some_folder::some_files as cool_module;
 pub fn test_code() {
     garage_module::arreglar_coche();
+    cool_module::example_function();
 }
 
 // idiomatic way
