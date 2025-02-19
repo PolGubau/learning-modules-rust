@@ -31,9 +31,14 @@ pub fn llevar_a_arreglar() {
 // is like a import in python
 use crate::taller::garaje as garage_module;
 use some_folder::some_files as cool_module;
+
+use rand::prelude::*;
 pub fn test_code() {
     garage_module::arreglar_coche();
     cool_module::example_function();
+    let mut rng = rand::thread_rng();
+    let y: f64 = rng.gen();
+    println!("Generated random number: {}", y);
 }
 
 // idiomatic way
